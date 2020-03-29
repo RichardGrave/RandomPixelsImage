@@ -120,6 +120,8 @@ func writePixelsToFile(imageFile *os.File, width, height int) {
 
 }
 
+//TODO:RG this is not OK.
+// We don't want recursion because it uses to much memory if the width and height are to big.
 func createRandomPixel(randomColorChan chan RandomColor, posx, posy, width, height int) {
 	var randomCol RandomColor
 
